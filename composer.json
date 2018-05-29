@@ -35,8 +35,7 @@
         "illuminate/support": "~5.5.0"
     },
     "require-dev": {
-        "illuminate/container": "~5.5.0",
-        "phpunit/phpunit": "^7.0.0"
+        "illuminate/container": "~5.5.0"
     },
     "autoload": {
         "classmap": [
