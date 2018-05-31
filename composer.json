@@ -38,9 +38,6 @@
         "illuminate/container": "~5.5.0"
     },
     "autoload": {
-        "classmap": [
-            "database"
-        ],
         "psr-4": {
             "Mostafaznv\\Categories\\": "src/"
         }

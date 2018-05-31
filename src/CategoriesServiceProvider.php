@@ -13,10 +13,10 @@ class CategoriesServiceProvider extends ServiceProvider
     {
         if ($this->app->runningInConsole())
         {
-            $this->loadMigrationsFrom(__DIR__ . '../database/migrations');
+            $this->loadMigrationsFrom(__DIR__ . '../migrations');
 
             $this->publishes([__DIR__ . '/../config/config.php' => config_path('categories.php')], 'config');
-            $this->publishes([__DIR__ . '/../database/migrations/' => database_path('migrations')], 'migrations');
+            $this->publishes([__DIR__ . '/../migrations/' => database_path('migrations')], 'migrations');
         }
     }
 
