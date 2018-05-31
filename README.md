@@ -116,7 +116,7 @@ This package collect stats automatically. you can disable it from the configurat
 
 If your categorizable model have `type` (*example*: `posts` model with these types: `video`, `podcast` and ...), package will calculate stats for each type separately (it's better to use string values for type)
 
-```bash
+```text
 
 {
   // categorizable model with `type` column in database
