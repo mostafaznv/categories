@@ -832,6 +832,12 @@ app('categories.category')->fixTree();
 > **Note:** Check **[Nested Sets](https://github.com/lazychaser/laravel-nestedset)** package for further details.
 
 
+## Contributors
+- Mostafa Zeinivand [@mostafaznv](https://github.com/mostafaznv)
+- Faezeh Ghorbannezhad [@Ghorbannezhad](https://github.com/Ghorbannezhad)
+- SamssonApps [@SamssonApps](https://github.com/SamssonApps)
+
+
 ## Changelog
 
 Refer to the [Changelog](CHANGELOG.md) for a full history of the project.
