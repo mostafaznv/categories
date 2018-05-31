@@ -111,6 +111,27 @@ protected $sluggable = [
 
 ```
 
+### Stats Configuration
+This package collect stats automatically. you can disable it from the configuration file.
+
+If your categorizable model have `type` (*example*: `posts` model with these types: `video`, `podcast` and ...), package will calculate stats for each type separately (it's better to use string values for type)
+
+```bash
+
+{
+  // categorizable model with `type` column in database
+  "posts": {
+    "podcast": 9, // posts with type of podcast
+    "video": 6,
+    "other": 2 // posts without type (null)
+  },
+  
+  // categorizable model without `type` column in database
+  "news": 16
+}
+
+```
+
 
 ### Manage your categorizable model
 
