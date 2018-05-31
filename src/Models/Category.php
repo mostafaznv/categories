@@ -49,6 +49,7 @@ class Category extends Model
         'slug',
         'name',
         'description',
+        'stats',
         NestedSet::LFT,
         NestedSet::RGT,
         NestedSet::PARENT_ID,
@@ -63,12 +64,12 @@ class Category extends Model
     ];
 
     protected $sluggable = [
-        'field' => 'slug',
-        'from' => 'name',
+        'field'     => 'slug',
+        'from'      => 'name',
         'on_create' => true,
         'on_update' => true,
         'separator' => '-',
-        'lang' => null
+        'lang'      => null
     ];
 
 
@@ -160,6 +161,27 @@ class Category extends Model
     }
 
     /**
+     * Cast Stats to json on retrieve
+     *
+     * @param $value
+     * @return mixed
+     */
+    public function getStatsAttribute($value)
+    {
+        return json_decode($value, true);
+    }
+
+    /**
+     * Cast stats to json string on save data
+     *
+     * @param $value
+     */
+    public function setStatsAttribute($value)
+    {
+        $this->attributes['stats'] = json_encode($value);
+    }
+
+    /**
      * Set custom property
      *
      * @param $name
@@ -242,7 +264,7 @@ class Category extends Model
                 $current_label = $label . $separator . $value['name'];
 
             $options[] = [
-                'id' => $value['id'],
+                'id'    => $value['id'],
                 'label' => $current_label,
             ];
 

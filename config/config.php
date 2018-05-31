@@ -10,10 +10,15 @@ return [
         'category' => \Mostafaznv\Categories\Models\Category::class,
     ],
 
-    /**
-     * extra rules key-value
-     * @see https://github.com/dwightwatson/validating
-     */
+    // collect stats
+    'stats' => [
+        'status' => true,
+        'categorizable_type_field' => 'type'
+    ],
+
+
+    // extra rules key-value
+    // @see https://github.com/dwightwatson/validating
     'rules' => [
         //
     ],

@@ -29,8 +29,8 @@ trait HasTranslations
      * Get translations.
      *
      * @param $key
-     *
      * @return array
+     * @throws \Spatie\Translatable\Exceptions\AttributeIsNotTranslatable
      */
     public function getTranslations($key): array
     {
