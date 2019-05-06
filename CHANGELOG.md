@@ -2,6 +2,9 @@
 
 All notable changes to this project will be documented in this file.
 
+## v0.0.3 - 2019/05/06
+- support laravel 5.8
+
 ## v0.0.2 - 2018/08/25
 - add support for kalnoy/nestedset 4.4.* to handle new sibling function
 
