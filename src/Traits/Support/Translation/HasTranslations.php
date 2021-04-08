@@ -22,7 +22,7 @@ trait HasTranslations
             return parent::getAttributeValue($key);
         }
 
-        return $this->getTranslation($key, config('app.locale')) ?: array_first($this->getTranslations($key));
+        return $this->getTranslation($key, config('app.locale')) ?: ($this->getTranslations( $key )[ 0 ] ?? null);
     }
 
     /**
@@ -34,7 +34,7 @@ trait HasTranslations
      */
     public function getTranslations($key): array
     {
-        $this->guardAgainstUntranslatableAttribute($key);
+        $this->guardAgainstNonTranslatableAttribute($key);
         $value = json_decode($this->getAttributes()[$key] ?? '' ?: '{}', true);
 
         // Inject default translation if none supplied
