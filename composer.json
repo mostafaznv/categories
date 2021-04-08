@@ -1,5 +1,5 @@
 {
-    "name": "hans-thomas/categories",
+    "name": "mostafaznv/categories",
     "description": "Categories is a polymorphic Laravel package, for category management. You can categorize any eloquent model with ease, and utilize the power of Nested Sets, and the awesomeness of and Translatable models out of the box.",
     "keywords": [
         "model",
